@@ -18,7 +18,6 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class Rest {
-	
 	@Autowired
 	UserRepository userRepository;
 	
@@ -141,6 +140,4 @@ public class Rest {
 	    List<SurveyResponse> surveys = surveyResponseRepository.findAll(); // Use a custom query if needed
 	    return ResponseEntity.ok(surveys);
 	}
-	
-   
 }
