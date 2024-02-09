@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define a Student bean with constructor-based injection -->
+    <bean id="student" class="com.KLU.hibernate_crud.Student">
+        <constructor-arg value="John" />
+        <constructor-arg value="12345" />
+    </bean>
+
+    <!-- Define a Counselor bean with setter-based injection -->
+    <bean id="counselor" class="com.KLU.hibernate_crud.Counselor">
+        <property name="name" value="Alice" />
+        <property name="id" value="C001" />
+        <property name="packageDetails">
+            <bean class="com.KLU.hibernate_crud.PackageDetails">
+                <property name="packageName" value="Gold Package" />
+                <property name="packageCost" value="5000.00" />
+            </bean>
+        </property>
+    </bean>
+</beans>
